@@ -1,13 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-secondary: #101118;
+    --color-primary: #6B7A8F;
+    --color-focus: #6D64F7;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-secondary);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.open-modal-btn {
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 0.125rem;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 1rem 2.5rem 1.125rem;
+    display: inline-block;
+    text-decoration: none;
+}
+.open-modal-btn + .open-modal-btn{margin-left: 1rem}
+.open-modal-btn:focus {
+    outline-offset: 2px;
+    outline: var(--color-focus) solid 3px;
+}
+
+.open-modal-btn:active {
+    transform: translateY(1px);
+}
+

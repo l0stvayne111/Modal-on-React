@@ -1,0 +1,44 @@
+.modal{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .6);
+  padding: 0 .3rem;
+  display: flex;
+  transition: .3s all linear;
+  &__body{
+    background: #fff;
+    width: 600px;
+    max-width: calc(100% - .01px);
+    padding: 1.5rem;
+    margin: auto;
+    position: relative;
+    transition: .3s ease;
+    transform: translateY(-2rem);
+    border-radius: 4px;
+  }
+  &__close{
+    position: absolute;
+    top: .7rem;
+    right: .7rem;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  &--open{
+    opacity: 1;
+    visibility: visible;
+    &>*{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  }
+  &--close{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
